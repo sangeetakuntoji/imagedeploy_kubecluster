@@ -2,7 +2,7 @@ on:
   push:
     branches: [ main ]
 
-name: storageaccount
+name: kubernetes cluster
 
 jobs:
 
