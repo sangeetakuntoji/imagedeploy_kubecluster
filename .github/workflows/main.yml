@@ -6,7 +6,7 @@ name: kubernetes cluster
 
 jobs:
 
-  Backend_storage:
+  Deployto_kubecluster:
     runs-on: ubuntu-latest
     
     steps:
@@ -20,7 +20,6 @@ jobs:
       shell: bash
       run: 
         az aks get-credentials --resource-group dev-rg --name testkubernetcluster01
-        Write-Host "Running deployment of container nginx on kube cluster"
         kubectl apply -f .\deployment\deployment.yaml
         #az group create --name skywave-prod1 --location eastus2
        # az storage account create --resource-group skywave-prod1 --name skywaveprodtfstate --location eastus2 --sku Standard_LRS --kind StorageV2
