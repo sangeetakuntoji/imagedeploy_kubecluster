@@ -21,6 +21,8 @@ jobs:
       with:
        inlineScript: | 
         az aks get-credentials --resource-group dev-rg --name testkubernetcluster01
+
+        kubectl get pods
         kubectl apply -f ./deployment/deployment.yaml
  
        # az storage account create --resource-group skywave-prod1 --name skywaveprodtfstate --location eastus2 --sku Standard_LRS --kind StorageV2
