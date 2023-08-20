@@ -24,7 +24,7 @@ jobs:
 
     - name: Running kube deployment
       shell: bash
-      working-directory: "./"
+      working-directory: "."
       run: | 
   
         kubectl apply -f deployment.yaml
