@@ -19,6 +19,7 @@ jobs:
     - name: Running kube clusters
       shell: bash
       run: | 
+        az aks install-cli
         az aks get-credentials --resource-group dev-rg --name testkubernetcluster01
 
     - name: Running kube deployment
