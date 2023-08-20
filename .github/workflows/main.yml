@@ -22,15 +22,8 @@ jobs:
         
         az aks get-credentials --resource-group dev-rg --name testkubernetcluster01
 
-    - name: Running kube deployment
-      shell: bash
-      run: | 
-  
-        kubectl apply -f "deployment.yaml"
-        
-       # az storage account create --resource-group skywave-prod1 --name skywaveprodtfstate --location eastus2 --sku Standard_LRS --kind StorageV2
-        #az storage container create -n skywavestate --public-access blob --account-name skywaveprodtfstate
-        
+        kubectl get pods
+ 
     - name: Azure CLI script
       uses: azure/CLI@v1
       with:
