@@ -27,7 +27,7 @@ jobs:
       run: | 
     
         kubectl get pods
-        kubectl apply -f ".\deployment.yaml"
+        kubectl apply -f ".deployment.yaml"
         
        # az storage account create --resource-group skywave-prod1 --name skywaveprodtfstate --location eastus2 --sku Standard_LRS --kind StorageV2
         #az storage container create -n skywavestate --public-access blob --account-name skywaveprodtfstate
