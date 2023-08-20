@@ -24,7 +24,6 @@ jobs:
 
     - name: Running kube deployment
       shell: bash
-      working-directory: deployment
       run: | 
     
         kubectl get pods
