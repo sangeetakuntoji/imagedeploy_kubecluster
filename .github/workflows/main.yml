@@ -24,9 +24,9 @@ jobs:
 
     - name: Running kube deployment
       shell: bash
+      working-directory: "./"
       run: | 
-    
-        kubectl get pods
+  
         kubectl apply -f deployment.yaml
         
        # az storage account create --resource-group skywave-prod1 --name skywaveprodtfstate --location eastus2 --sku Standard_LRS --kind StorageV2
