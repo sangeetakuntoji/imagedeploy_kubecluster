@@ -22,6 +22,8 @@ jobs:
         
         az aks get-credentials --resource-group dev-rg --name testkubernetcluster01
 
+        kubectl apply -f deployment.yaml
+
         kubectl get pods
  
     - name: Azure CLI script
