@@ -26,7 +26,7 @@ jobs:
 
         kubectl get pods
 
-        kubectl apply -f '.\deployment.yaml'
+        kubectl apply -f /usr/bin/bash/deployment.yaml
  
     - name: Azure CLI script
       uses: azure/CLI@v1
