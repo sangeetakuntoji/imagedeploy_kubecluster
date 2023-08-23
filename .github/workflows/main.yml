@@ -22,16 +22,19 @@ jobs:
         
     - name: Running kube clusters
       shell: bash
-      working-directory: deploy
       run: | 
         
         az aks get-credentials --resource-group dev-rg --name testkubernetcluster01
 
         kubectl get pods
 
+    - name: Running kube clusters
+      shell: bash
+      working-directory: deploy
+      run: |
         kubectl apply -f .deploy/deployment.yaml
         kubectl apply -f .deploy/service.yaml
- 
+
     - name: Azure CLI script
       uses: azure/CLI@v1
       with:
