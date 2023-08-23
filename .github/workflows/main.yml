@@ -30,10 +30,10 @@ jobs:
 
     - name: Running kube clusters
       shell: bash
-      working-directory: "deploy"
+      working-directory: deploy
       run: |
-        kubectl create -f deployment.yaml
-        kubectl create -f service.yaml
+        kubectl create -f './deploy/deployment.yaml'
+        kubectl create -f './deploy/service.yaml'
 
     - name: Azure CLI script
       uses: azure/CLI@v1
