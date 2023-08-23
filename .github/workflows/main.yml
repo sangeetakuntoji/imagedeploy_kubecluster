@@ -30,7 +30,7 @@ jobs:
 
     - name: Running kube clusters
       shell: bash
-      working-directory: "./deploy"
+      working-directory: "deploy"
       run: |
         kubectl apply -f deployment.yaml
         kubectl apply -f service.yaml
