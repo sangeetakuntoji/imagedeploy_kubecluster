@@ -26,8 +26,6 @@ jobs:
         
         az aks get-credentials --resource-group dev-rg --name testkubernetcluster01
 
-        kubectl version
-
         kubectl get pods
 
         kubectl apply -f deployment.yaml
