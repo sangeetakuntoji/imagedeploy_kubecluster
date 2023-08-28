@@ -2,7 +2,7 @@ on:
   push:
     branches: [ main ]
 
-name: kubernetes cluster
+name: kubernetes-cluster
 
 jobs:
 
