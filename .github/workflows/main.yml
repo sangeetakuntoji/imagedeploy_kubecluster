@@ -20,14 +20,18 @@ jobs:
        id: install-kubectl
        uses: azure/setup-kubectl@v3
 
-    - name: Update kube config
-      run: az aks get-credentials --resource-group learnk8sResourceGroup --name learnk8scluster
- 
-    - name: Deploy image to Amazon EKS
-      run: 
-         kubectl apply -f menifest\deployment.yaml
-         kubectl apply -f menifest\service.yaml
-
+    - name: Azure CLI Action
+      uses: Azure/cli@v1
+      with:
+    #- name: Update kube config
+     # run: az aks get-credentials --resource-group learnk8sResourceGroup --name learnk8scluster
+       inlineScript: az aks get-credentials --resource-group learnk8sResourceGroup --name learnk8scluster
+        kubectl apply -f menifest\deployment.yaml
+    #- name: Deploy image to Amazon EKS
+     # run: 
+      #   kubectl apply -f menifest\deployment.yaml
+        # kubectl apply -f menifest\service.yaml
+#
     - name: Azure CLI script
       uses: azure/CLI@v1
       with:
